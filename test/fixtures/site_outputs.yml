@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  sys_cap: 9.99
+  ac_output: 9.99
+  dc_output: 9.99
+  month: MyString
+
+two:
+  location: MyString
+  sys_cap: 9.99
+  ac_output: 9.99
+  dc_output: 9.99
+  month: MyString
