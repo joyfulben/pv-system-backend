@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/' => '#'
+  get '/' => 'users#index'
   root '#'
   resources :site_outputs
   resources :users do
