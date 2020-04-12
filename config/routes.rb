@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'login#'
+  get '/' => '#'
+  root '#'
   resources :site_outputs
   resources :users do
     collection do
