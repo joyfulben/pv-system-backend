@@ -5,8 +5,8 @@ class UsersController < ApplicationController
 
   # Authenticating login /users/login
   def login
-    user = User.find_by(username: params[:user][:username])
-    if user && user.authenticate(params[:user][:password])
+    user = User.find_by(username: params[:username])
+    if user && user.authenticate(params[:password])
       token = create_token(user.id, user.username)
       render json: {status: 200, token: token, user: user}
     else
@@ -22,14 +22,13 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    render json: get_current_user
+    render json: get_current_user.to_json(include: :site_outputs)
   end
 
   # POST /users
   def create
 
     @user = User.create(user_params)
-    puts user_params
     if @user.save
       render json: @user, status: :created
     else

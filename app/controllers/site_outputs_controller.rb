@@ -39,6 +39,6 @@ class SiteOutputsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def site_output_params
-      params.require(:site_output).permit(:location, :sys_cap, :ac_output, :dc_output, :month)
+      params.permit(:location, :sys_cap, :ac_output, :dc_output, :month)
     end
 end
