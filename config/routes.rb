@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root '#'
   resources :site_outputs
   resources :users do
     collection do
