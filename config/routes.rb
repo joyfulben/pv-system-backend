@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/index' => 'users#index'
-  root 'users/index'
+  root 'welcome#index'
   resources :site_outputs
   resources :users do
     collection do
